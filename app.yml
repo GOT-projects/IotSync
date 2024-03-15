@@ -25,10 +25,10 @@ metadata:
   name: wil-app
   namespace: dev
 spec:
-  type: LoadBalancer
+  type: NodePort
+  selector:
+    app: wil-app
   ports:
-    - name: will-app
-      port: 80
-      protocol: TCP
-      targetPort: 8888
-  loadBalancerIP: 10.27.27.91
+  - port: 8888
+    targetPort: 8888
+    nodePort: 30080
