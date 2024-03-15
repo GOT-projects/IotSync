@@ -31,3 +31,4 @@ spec:
       port: 80
       protocol: TCP
       targetPort: 8888
+    loadBalancerIP: 10.27.27.91
